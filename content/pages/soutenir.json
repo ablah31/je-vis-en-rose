@@ -1,0 +1,33 @@
+{
+  "title": "Nous soutenir",
+  "seoTitle": "Soutenir Je vis en Rose — Dons, adhésions et produits solidaires",
+  "seoDescription": "Adhésions, dons et produits solidaires financent les soins de support, les actions de sensibilisation et la recherche médicale. Soutenez Je vis en Rose.",
+  "heroTitle": "Agir concrètement aux côtés des malades",
+  "heroSubtitle": "Soutenir Je vis en Rose, c'est améliorer le quotidien des personnes touchées par le cancer. Adhésions, dons et produits solidaires financent des soins de support, des actions de sensibilisation et la recherche médicale.",
+  "heroImage": "/images/soutenir.jpg",
+  "heroImageAlt": "Bénévoles tenant un cœur rose symbole de générosité",
+  "ctaLabel": "Faire un don sur HelloAsso",
+  "ctaUrl": "https://www.helloasso.com/associations/je-vis-en-rose",
+  "sections": [
+    {
+      "_template": "support",
+      "heading": "Faire un don",
+      "body": "Votre don, ponctuel ou régulier, finance les soins de support et la recherche. Le paiement est géré en toute sécurité sur HelloAsso."
+    },
+    {
+      "_template": "support",
+      "heading": "Acheter des produits solidaires",
+      "body": "La vente de produits solidaires soutient directement les actions de l'association au profit des personnes malades."
+    },
+    {
+      "_template": "support",
+      "heading": "Devenir adhérent",
+      "body": "Adhérez à l'association pour accéder aux soins de support et soutenir nos actions tout au long de l'année. Un formulaire d'adhésion est disponible sur demande."
+    },
+    {
+      "_template": "support",
+      "heading": "Relayer l'association",
+      "body": "Parlez de nous autour de vous, sur Instagram et YouTube, pour amplifier nos messages de prévention et d'espoir."
+    }
+  ]
+}

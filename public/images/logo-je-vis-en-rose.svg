@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80" role="img" aria-label="Je vis en Rose">
+  <circle cx="40" cy="40" r="26" fill="#FDEAF0"/>
+  <path d="M 40 30 c 5 -8, 18 -3, 9 9 l -9 9 l -9 -9 c -9 -12, 4 -17, 9 -9 Z" fill="#E88BA8"/>
+  <text x="80" y="48" font-family="Georgia, serif" font-size="26" font-weight="600" fill="#6F2D4F">Je vis en Rose</text>
+</svg>

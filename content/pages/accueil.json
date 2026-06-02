@@ -1,0 +1,30 @@
+{
+  "title": "Accueil",
+  "seoTitle": "Je vis en Rose — Accompagner les personnes atteintes d'un cancer à Colomiers",
+  "seoDescription": "Créée à Colomiers en 2021, l'association Je vis en Rose accompagne les personnes atteintes d'un cancer : prévention, sensibilisation et soins de support.",
+  "heroTitle": "Accompagner et soutenir les personnes atteintes d'un cancer",
+  "heroSubtitle": "Créée à Colomiers, l'association Je vis en Rose agit toute l'année à travers des actions de prévention, de sensibilisation et une offre de soins de support.",
+  "heroImage": "/images/hero-accueil.jpg",
+  "heroImageAlt": "Mains qui se tiennent en signe de soutien et de solidarité",
+  "ctaLabel": "Découvrir l'association",
+  "ctaUrl": "/association",
+  "ctaSecondaryLabel": "Nous soutenir",
+  "ctaSecondaryUrl": "/soutenir",
+  "sections": [
+    {
+      "_template": "mission",
+      "heading": "Accompagner",
+      "body": "Des soins de support individuels et en groupe pour améliorer la qualité de vie des personnes touchées par le cancer."
+    },
+    {
+      "_template": "mission",
+      "heading": "Sensibiliser",
+      "body": "Des actions de prévention et d'information, et des projets artistiques pour parler de la maladie autrement."
+    },
+    {
+      "_template": "mission",
+      "heading": "Soutenir",
+      "body": "Les fonds récoltés financent les soins de support pour les malades et soutiennent la recherche médicale."
+    }
+  ]
+}

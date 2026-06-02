@@ -1,0 +1,88 @@
+fragment PagesParts on Pages {
+  __typename
+  title
+  seoTitle
+  seoDescription
+  heroTitle
+  heroSubtitle
+  heroImage
+  heroImageAlt
+  ctaLabel
+  ctaUrl
+  ctaSecondaryLabel
+  ctaSecondaryUrl
+  sections {
+    __typename
+    _template
+    heading
+    body
+  }
+}
+
+fragment ActualitesParts on Actualites {
+  __typename
+  title
+  slug
+  date
+  excerpt
+  coverImage
+  coverImageAlt
+  category
+  author
+  featured
+  seoTitle
+  seoDescription
+  body
+}
+
+fragment EvenementsParts on Evenements {
+  __typename
+  title
+  slug
+  startDate
+  endDate
+  location
+  address
+  excerpt
+  coverImage
+  coverImageAlt
+  registrationUrl
+  isPastEvent
+  seoTitle
+  seoDescription
+  body
+}
+
+fragment TemoignagesParts on Temoignages {
+  __typename
+  name
+  role
+  quote
+  image
+  published
+  order
+}
+
+fragment PartenairesParts on Partenaires {
+  __typename
+  name
+  logo
+  websiteUrl
+  order
+  published
+}
+
+fragment SettingsParts on Settings {
+  __typename
+  siteName
+  siteDescription
+  logo
+  email
+  phone
+  address
+  facebookUrl
+  instagramUrl
+  youtubeUrl
+  linkedinUrl
+  helloAssoUrl
+}

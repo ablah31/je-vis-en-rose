@@ -1,0 +1,329 @@
+query pages($relativePath: String!) {
+  pages(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...PagesParts
+  }
+}
+
+query pagesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PagesFilter) {
+  pagesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...PagesParts
+      }
+    }
+  }
+}
+
+query actualites($relativePath: String!) {
+  actualites(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...ActualitesParts
+  }
+}
+
+query actualitesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ActualitesFilter) {
+  actualitesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...ActualitesParts
+      }
+    }
+  }
+}
+
+query evenements($relativePath: String!) {
+  evenements(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...EvenementsParts
+  }
+}
+
+query evenementsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: EvenementsFilter) {
+  evenementsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...EvenementsParts
+      }
+    }
+  }
+}
+
+query temoignages($relativePath: String!) {
+  temoignages(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...TemoignagesParts
+  }
+}
+
+query temoignagesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: TemoignagesFilter) {
+  temoignagesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...TemoignagesParts
+      }
+    }
+  }
+}
+
+query partenaires($relativePath: String!) {
+  partenaires(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...PartenairesParts
+  }
+}
+
+query partenairesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PartenairesFilter) {
+  partenairesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...PartenairesParts
+      }
+    }
+  }
+}
+
+query settings($relativePath: String!) {
+  settings(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...SettingsParts
+  }
+}
+
+query settingsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SettingsFilter) {
+  settingsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...SettingsParts
+      }
+    }
+  }
+}

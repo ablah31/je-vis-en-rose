@@ -1,0 +1,36 @@
+{
+  "title": "Nos actions",
+  "seoTitle": "Nos actions — Soins de support et projets artistiques | Je vis en Rose",
+  "seoDescription": "Soins de support, bande dessinée et mangas pédagogiques, vidéos de sensibilisation, danse et musique : découvrez les actions de Je vis en Rose.",
+  "heroTitle": "Informer et accompagner autrement",
+  "heroSubtitle": "Je vis en Rose développe de nombreuses actions mêlant prévention, soins de support et création artistique.",
+  "heroImage": "/images/actions.jpg",
+  "heroImageAlt": "Atelier collectif convivial organisé par l'association",
+  "sections": [
+    {
+      "_template": "action",
+      "heading": "Soins de support",
+      "body": "Chaque semaine, des soins individuels ou en groupe pour les adhérents atteints d'un cancer : socio-esthétique, shiatsu, réflexologie plantaire, art-thérapie, art-thérapie tatouage, stretching postural et ateliers de diététique."
+    },
+    {
+      "_template": "action",
+      "heading": "Journée cocooning",
+      "body": "En mars, une journée offerte aux personnes atteintes d'un cancer ou ayant terminé leurs traitements depuis moins d'un an : ateliers, repas réconfortants, sourires et bonne humeur."
+    },
+    {
+      "_template": "action",
+      "heading": "Bande dessinée & mangas",
+      "body": "Une bande dessinée et deux mangas pédagogiques et accessibles pour mieux comprendre la maladie, en parler autrement et accompagner les patients et leurs proches, notamment les adolescents."
+    },
+    {
+      "_template": "action",
+      "heading": "Vidéos & courts-métrages",
+      "body": "Des vidéos de sensibilisation, courts-métrages et reportages abordant le parcours de soin, le rendez-vous d'annonce, les émotions liées à la maladie et l'importance des soins de support."
+    },
+    {
+      "_template": "action",
+      "heading": "Danse, musique & projets artistiques",
+      "body": "Des projets artistiques (danse, musique, chansons, flashmobs) pour exprimer les émotions liées au cancer, sensibiliser le public et porter des messages d'espoir."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "L'association",
+  "seoTitle": "L'association Je vis en Rose, engagée depuis 2021 à Colomiers",
+  "seoDescription": "Je vis en Rose a été créée en 2021 par PinkMam' et Isabelle pour soutenir les personnes touchées par le cancer, en lien étroit avec les soignants.",
+  "heroTitle": "Une association engagée depuis 2021",
+  "heroSubtitle": "Créée par deux patientes, Je vis en Rose contribue à la lutte contre le cancer et soutient les malades et leurs proches, pendant et après la maladie.",
+  "heroImage": "/images/association.jpg",
+  "heroImageAlt": "Groupe de bénévoles souriants réunis lors d'une rencontre associative",
+  "sections": [
+    {
+      "_template": "richText",
+      "heading": "Notre histoire",
+      "body": "L'association Je vis en Rose a été créée en 2021 par deux patientes, PinkMam' et Isabelle, dans le but de contribuer à la lutte contre le cancer et de soutenir les malades ainsi que leurs proches pendant et après la maladie."
+    },
+    {
+      "_template": "richText",
+      "heading": "Notre mission",
+      "body": "À travers des projets artistiques, éducatifs et solidaires (bande dessinée, manga, vidéos, musique, événements…), l'association agit pour informer, sensibiliser et accompagner autrement. L'ensemble des fonds récoltés sert à offrir des soins de support aux personnes malades et à soutenir la recherche médicale."
+    },
+    {
+      "_template": "richText",
+      "heading": "PinkMam', un symbole",
+      "body": "PinkMam', c'est une femme touchée par le cancer du sein, mais aussi un symbole : celui de toutes les femmes qui traversent la maladie avec courage. Je vis en Rose, c'est une association où chacune peut se reconnaître."
+    },
+    {
+      "_template": "richText",
+      "heading": "Une démarche humaine et bienveillante",
+      "body": "L'association agit en lien étroit avec les soignants, les établissements de santé et les patients, dans une démarche profondément humaine et bienveillante."
+    }
+  ]
+}

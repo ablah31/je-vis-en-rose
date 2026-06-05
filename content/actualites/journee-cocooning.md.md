@@ -9,6 +9,7 @@ excerpt: |-
   18 bénévoles
   35 animateurs
   Rendez-vous l'année prochaine pour la troisième édition.  
+coverImage: /images/Capture-d’écran-2026-06-05-123447.png
 category: Journée Cocooning
 author: Je Vis en Rose
 seoTitle: Notre Journée Cocooning - Je Vis en Rose

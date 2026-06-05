@@ -17,12 +17,9 @@ seoDescription: 'Une journée plaisir pour toutes les personnes touchées par un
 
 Je Vis en Rose organise une Journée Cocooning pour toutes les personnes atteintes d'un cancer. Au programme : massages, sophrologie, escrime et bien d'autres activités, plein de bonnes choses à grignoter, mais surtout, beaucoup de sourires et de bonheur. 
 
-85 participants
-
-33 ateliers
-
-18 bénévoles
-
-35 animateurs
+* 85 participants
+* 33 ateliers
+* 18 bénévoles
+* 35 animateurs
 
 Rendez-vous l'année prochaine pour la troisième édition.

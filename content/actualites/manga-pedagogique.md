@@ -2,7 +2,7 @@
 title: Notre manga pédagogique pour parler de la maladie
 slug: manga-pedagogique
 date: 2025-03-15T01:00:00.000Z
-excerpt: Je Vis en Rose diffuse deux mangas pour mieux comprendre la maladie et l'accompagner autrement.
+excerpt: 'Je Vis en Rose diffuse deux mangas pour mieux comprendre la maladie et accompagner les familles autrement, notamment les adolescents.'
 coverImage: /images/couverture-manga-Accroche-toi.jpg
 coverImageAlt: Planches de bande dessinée posées sur une table
 category: Projets artistiques

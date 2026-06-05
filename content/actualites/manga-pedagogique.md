@@ -12,10 +12,7 @@ seoTitle: Notre manga pédagogique — Je vis en Rose
 seoDescription: Découvrez les mangas pédagogiques de l'association Je vis en Rose pour parler du cancer avec vos adolescents.
 ---
 
-Pour informer et accompagner autrement, Je Vis en Rose diffuse une bande dessinée
-et deux mangas pédagogiques et accessibles.
+Pour informer et accompagner autrement, Je Vis en Rose diffuse deux mangas pédagogiques et accessibles.
 
 Ces récits permettent de mieux comprendre la maladie, d'en parler autrement et
 d'accompagner les patients et leurs proches, notamment les adolescents.
-
-> Contenu de démonstration à remplacer par l'association.

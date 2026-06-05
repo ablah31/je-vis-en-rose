@@ -3,7 +3,7 @@ title: Octobre Rose à Colomiers
 slug: octobre-rose-colomiers
 date: 2025-10-01T00:00:00.000Z
 excerpt: Une mobilisation locale pour sensibiliser au dépistage et soutenir les personnes concernées.
-coverImage: '/images/Photo-Malika,-Maire-de-Colomiers-et-Oncologue-retouchée.jpg'
+coverImage: '/images/Photo-Malika,-Maire-de-Colomiers-et-Oncologue-retouchée-2.jpg'
 coverImageAlt: Je Vis en Rose avec Mme la Maire de Colomiers
 category: Sensibilisation
 author: Je vis en Rose

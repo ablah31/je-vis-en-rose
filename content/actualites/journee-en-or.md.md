@@ -7,6 +7,7 @@ coverImage: /images/WhatsApp-Image-2026-06-05-at-12.57.54.jpeg
 coverImageAlt: Affiche de la Journée en Or
 category: Journée en Or
 author: Je Vis en Rose
+featured: true
 seoTitle: Notre Journée en Or - Je Vis en Rose
 seoDescription: 'Je Vis en Rose organise une journée en Or pour les enfants atteints d''un cancer, leurs familles et leurs enfants. '
 ---

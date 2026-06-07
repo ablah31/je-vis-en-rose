@@ -12,7 +12,6 @@ seoTitle: Notre manga pédagogique — Je vis en Rose
 seoDescription: Découvrez les mangas pédagogiques de l'association Je vis en Rose pour parler du cancer avec vos adolescents.
 ---
 
-Pour informer et accompagner autrement, Je Vis en Rose diffuse deux mangas pédagogiques et accessibles.
+S’il existe des albums pour expliquer la maladie aux enfants, des livres pour les adultes, il n’y avait rien pour les adolescents. Le manga semblait être l’outil idéal pour s’adresser à eux. Voilà chose faite grâce au premier album *Accroche toi,* qui traite du cancer du sein néoadjuvant à travers le protocole de soin d’une patiente, à partir de l’annonce de la maladie jusqu’à la fin des traitements. Le lecteur la suit, tout au long du récit, dans sa vie quotidienne avec sa famille, ses amis mais aussi, bien sûr, ses médecins et autres soignants. 
 
-Ces récits permettent de mieux comprendre la maladie, d'en parler autrement et
-d'accompagner les patients et leurs proches, notamment les adolescents.
+Il a été rédigé en partenariat étroit avec une médecin oncologue, une radiothérapeute, un chirurgien et une kinésithérapeute spécialisée en cancer du sein.  

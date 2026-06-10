@@ -11,7 +11,7 @@ coverImageAlt: Atelier bien-être chaleureux lors d'une journée cocooning
 registrationUrl: ''
 isPastEvent: false
 seoTitle: Journée en or — Je vis en Rose
-seoDescription: "Une demi-journée plaisir pour les enfants atteints d’un cancer et leurs familles (parents et fratrie) ainsi que les soignants qui s’occupent d’eux au quotidien. \n-\tSoins individuels et ateliers en famille (une salle par famille) : 1h de soins individuels et 30 minutes d’atelier en famille \n-\t Ateliers de groupe et mini spectacles\n-\t2 soins offerts par soignant dans des salles réservées à cet effet. \nSophrologie,  réflexologie plantaire, ostéopathie, massages... au programme mais aussi art thérapie, escrime et bien d'autres surprises pour que cette journée soit inoubliable. "
+seoDescription: "Une demi-journée plaisir pour les enfants atteints d’un cancer et leurs familles (parents et fratrie) ainsi que les soignants qui s’occupent d’eux au quotidien. \nAu programme : \n-\tSoins individuels et ateliers en famille (une salle par famille) : 1h de soins individuels et 30 minutes d’atelier en famille.\n-\t Ateliers de groupe et mini spectacles.\n-\t2 soins offerts par soignant dans des salles réservées à cet effet. \nSophrologie, réflexologie plantaire, ostéopathie,... mais aussi art thérapie, escrime et bien d'autres surprises pour que cette journée soit inoubliable. \nJournée offerte sur inscription. Appelez nous ou envoyez nous un mail et on vous rappellera. "
 ---
 
 Chaque année en mars, l'association organise une journée cocooning offerte à

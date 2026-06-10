@@ -16,6 +16,7 @@ fragment PagesParts on Pages {
     _template
     heading
     body
+    linkUrl
   }
 }
 

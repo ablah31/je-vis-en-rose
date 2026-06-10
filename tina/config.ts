@@ -94,6 +94,13 @@ export default defineConfig({
                 label: "Texte",
                 ui: { component: "textarea" },
               },
+              {
+                type: "string",
+                name: "linkUrl",
+                label: "Lien (URL)",
+                description:
+                  "Rend la carte cliquable : lien HelloAsso, page du site, etc. Laisser vide pour une carte sans lien.",
+              },
             ],
           },
         ],

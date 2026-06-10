@@ -106,6 +106,7 @@ type PagesSections {
   _template: String
   heading: String
   body: String
+  linkUrl: String
 }
 
 type Pages implements Node & Document {
@@ -144,6 +145,7 @@ input PagesSectionsFilter {
   _template: StringFilter
   heading: StringFilter
   body: StringFilter
+  linkUrl: StringFilter
 }
 
 input PagesFilter {
@@ -440,6 +442,7 @@ input PagesSectionsMutation {
   _template: String
   heading: String
   body: String
+  linkUrl: String
 }
 
 input PagesMutation {

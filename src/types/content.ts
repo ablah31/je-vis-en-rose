@@ -2,6 +2,7 @@ export interface PageSection {
   _template?: string;
   heading?: string;
   body?: string;
+  linkUrl?: string;
   [key: string]: unknown;
 }
 

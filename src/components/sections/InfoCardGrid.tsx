@@ -1,4 +1,6 @@
+import Link from "next/link";
 import {
+  ArrowUpRight,
   Calendar,
   HandHeart,
   HeartHandshake,
@@ -28,6 +30,27 @@ function pickIcon(heading?: string): LucideIcon {
   return ICON_BY_KEYWORD.find((e) => e.match.test(heading))?.Icon ?? Sparkles;
 }
 
+function CardBody({ item, Icon }: { item: PageSection; Icon: LucideIcon }) {
+  const hasLink = Boolean(item.linkUrl);
+  return (
+    <CardContent className="flex h-full flex-col gap-4 p-6">
+      <span className="flex size-12 items-center justify-center rounded-2xl bg-secondary text-prune">
+        <Icon className="size-6" aria-hidden="true" />
+      </span>
+      <h3 className="font-heading text-xl font-semibold text-prune">
+        {item.heading}
+        {hasLink ? (
+          <ArrowUpRight
+            className="ml-1 inline-block size-4 align-super text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            aria-hidden="true"
+          />
+        ) : null}
+      </h3>
+      <p className="text-muted-foreground">{item.body}</p>
+    </CardContent>
+  );
+}
+
 export function InfoCardGrid({
   items,
   columns = 3,
@@ -47,21 +70,41 @@ export function InfoCardGrid({
     >
       {items.map((item, index) => {
         const Icon = pickIcon(item.heading);
-        return (
-          <Card
-            key={item.heading ?? index}
-            className="h-full border-border bg-card transition-shadow hover:shadow-md"
-          >
-            <CardContent className="flex h-full flex-col gap-4 p-6">
-              <span className="flex size-12 items-center justify-center rounded-2xl bg-secondary text-prune">
-                <Icon className="size-6" aria-hidden="true" />
-              </span>
-              <h3 className="font-heading text-xl font-semibold text-prune">
-                {item.heading}
-              </h3>
-              <p className="text-muted-foreground">{item.body}</p>
-            </CardContent>
+        const key = item.heading ?? index;
+        const cardClassName =
+          "h-full border-border bg-card transition-shadow hover:shadow-md";
+
+        if (!item.linkUrl) {
+          return (
+            <Card key={key} className={cardClassName}>
+              <CardBody item={item} Icon={Icon} />
+            </Card>
+          );
+        }
+
+        const isExternal = /^https?:\/\//.test(item.linkUrl);
+        const linkClassName = "group block h-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring";
+        const linkedCard = (
+          <Card className={`${cardClassName} group-hover:border-accent`}>
+            <CardBody item={item} Icon={Icon} />
           </Card>
+        );
+
+        return isExternal ? (
+          <a
+            key={key}
+            href={item.linkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClassName}
+            aria-label={`${item.heading ?? "En savoir plus"} (nouvel onglet)`}
+          >
+            {linkedCard}
+          </a>
+        ) : (
+          <Link key={key} href={item.linkUrl} className={linkClassName}>
+            {linkedCard}
+          </Link>
         );
       })}
     </div>

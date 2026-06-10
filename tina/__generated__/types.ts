@@ -260,6 +260,7 @@ export type PagesSections = {
   _template?: Maybe<Scalars['String']['output']>;
   heading?: Maybe<Scalars['String']['output']>;
   body?: Maybe<Scalars['String']['output']>;
+  linkUrl?: Maybe<Scalars['String']['output']>;
 };
 
 export type Pages = Node & Document & {
@@ -299,6 +300,7 @@ export type PagesSectionsFilter = {
   _template?: InputMaybe<StringFilter>;
   heading?: InputMaybe<StringFilter>;
   body?: InputMaybe<StringFilter>;
+  linkUrl?: InputMaybe<StringFilter>;
 };
 
 export type PagesFilter = {
@@ -718,6 +720,7 @@ export type PagesSectionsMutation = {
   _template?: InputMaybe<Scalars['String']['input']>;
   heading?: InputMaybe<Scalars['String']['input']>;
   body?: InputMaybe<Scalars['String']['input']>;
+  linkUrl?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type PagesMutation = {
@@ -798,7 +801,7 @@ export type SettingsMutation = {
   helloAssoUrl?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type PagesPartsFragment = { __typename: 'Pages', title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null } | null> | null };
+export type PagesPartsFragment = { __typename: 'Pages', title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null, linkUrl?: string | null } | null> | null };
 
 export type ActualitesPartsFragment = { __typename: 'Actualites', title: string, slug: string, date: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null };
 
@@ -815,7 +818,7 @@ export type PagesQueryVariables = Exact<{
 }>;
 
 
-export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'Pages', id: string, title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null } | null> | null } };
+export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'Pages', id: string, title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null, linkUrl?: string | null } | null> | null } };
 
 export type PagesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -827,7 +830,7 @@ export type PagesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'Pages', id: string, title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null } | null> | null } | null } | null> | null } };
+export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'Pages', id: string, title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null, linkUrl?: string | null } | null> | null } | null } | null> | null } };
 
 export type ActualitesQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -943,6 +946,7 @@ export const PagesPartsFragmentDoc = gql`
     _template
     heading
     body
+    linkUrl
   }
 }
     `;

@@ -24,6 +24,7 @@ export const PagesPartsFragmentDoc = gql`
     _template
     heading
     body
+    linkUrl
   }
 }
     `;

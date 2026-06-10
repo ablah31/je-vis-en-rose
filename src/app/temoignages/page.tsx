@@ -3,12 +3,14 @@ import { PageHero } from "@/components/sections/PageHero";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { CtaDonation } from "@/components/sections/CtaDonation";
 import { getSettings, getTestimonials } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Témoignages",
   description:
     "Des témoignages publics et validés par l'association Je vis en Rose, dans le respect et la confidentialité des personnes.",
-};
+  path: "/temoignages",
+});
 
 export default async function TemoignagesPage() {
   const [testimonials, settings] = await Promise.all([

@@ -4,12 +4,14 @@ import {
   ToComplete,
 } from "@/components/sections/LegalPageLayout";
 import { getSettings } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Mentions légales",
   description:
     "Mentions légales du site de l'association Je vis en Rose à Colomiers.",
-};
+  path: "/mentions-legales",
+});
 
 export default async function MentionsLegalesPage() {
   const settings = await getSettings();

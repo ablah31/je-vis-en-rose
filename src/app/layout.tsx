@@ -3,7 +3,10 @@ import { Fraunces, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import { getSettings } from "@/lib/content";
+import { organizationSchema } from "@/lib/json-ld";
+import { DEFAULT_OG_IMAGE, SITE_NAME } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
 const fontHeading = Fraunces({
@@ -30,8 +33,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Je vis en Rose",
-    images: ["/images/og-image.svg"],
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Je vis en Rose — Association de soutien autour du cancer à Colomiers",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    apple: [{ url: DEFAULT_OG_IMAGE }],
   },
 };
 
@@ -48,6 +67,7 @@ export default async function RootLayout({
       className={`${fontHeading.variable} ${fontBody.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <JsonLd data={organizationSchema(settings)} />
         <a
           href="#contenu"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-prune focus:px-4 focus:py-2 focus:text-white"

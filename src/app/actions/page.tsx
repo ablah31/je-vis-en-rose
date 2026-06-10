@@ -9,7 +9,7 @@ import { getPage, getSettings } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(await getPage("actions"));
+  return pageMetadata(await getPage("actions"), "/actions");
 }
 
 export default async function ActionsPage() {

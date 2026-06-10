@@ -3,12 +3,14 @@ import { PageHero } from "@/components/sections/PageHero";
 import { EventCard } from "@/components/EventCard";
 import { Separator } from "@/components/ui/separator";
 import { getPastEvents, getUpcomingEvents } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Événements",
   description:
     "Découvrez les événements à venir et passés de l'association Je vis en Rose à Colomiers.",
-};
+  path: "/evenements",
+});
 
 export default async function EvenementsPage() {
   const [upcoming, past] = await Promise.all([

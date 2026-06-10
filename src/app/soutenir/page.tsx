@@ -9,7 +9,7 @@ import { getPage, getSettings } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(await getPage("soutenir"));
+  return pageMetadata(await getPage("soutenir"), "/soutenir");
 }
 
 export default async function SoutenirPage() {

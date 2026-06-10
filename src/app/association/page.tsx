@@ -5,7 +5,7 @@ import { getPage, getSettings } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(await getPage("association"));
+  return pageMetadata(await getPage("association"), "/association");
 }
 
 export default async function AssociationPage() {

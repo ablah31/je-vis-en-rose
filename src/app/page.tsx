@@ -14,13 +14,10 @@ import {
   getTestimonials,
   getUpcomingEvents,
 } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const page = await getPage("accueil");
-  return {
-    title: page.seoTitle ?? page.title,
-    description: page.seoDescription,
-  };
+  return pageMetadata(await getPage("accueil"), "/");
 }
 
 export default async function HomePage() {

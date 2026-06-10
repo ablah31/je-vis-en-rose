@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { ArticleCard } from "@/components/ArticleCard";
 import { getArticles } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Actualités",
   description:
     "Suivez les actualités de l'association Je vis en Rose à Colomiers : actions, événements et temps forts.",
-};
+  path: "/actualites",
+});
 
 export default async function ActualitesPage() {
   const articles = await getArticles();

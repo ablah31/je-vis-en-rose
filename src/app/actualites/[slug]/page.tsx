@@ -4,8 +4,11 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Markdown } from "@/components/Markdown";
 import { BackLink } from "@/components/BackLink";
+import { JsonLd } from "@/components/JsonLd";
 import { getArticle, getArticles } from "@/lib/content";
 import { formatDate } from "@/lib/format";
+import { articleSchema, breadcrumbSchema } from "@/lib/json-ld";
+import { buildMetadata, DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -20,17 +23,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const article = await getArticle(slug);
   if (!article) return {};
-  return {
+  return buildMetadata({
     title: article.seoTitle ?? article.title,
     description: article.seoDescription ?? article.excerpt,
-    openGraph: {
-      title: article.seoTitle ?? article.title,
-      description: article.seoDescription ?? article.excerpt,
-      type: "article",
-      publishedTime: article.date,
-      images: article.coverImage ? [article.coverImage] : undefined,
-    },
-  };
+    path: `/actualites/${article.slug}`,
+    image: article.coverImage ?? DEFAULT_OG_IMAGE,
+    type: "article",
+    publishedTime: article.date,
+  });
 }
 
 export default async function ArticlePage({ params }: Params) {
@@ -41,6 +41,16 @@ export default async function ArticlePage({ params }: Params) {
 
   return (
     <article className="container max-w-3xl py-12 md:py-16">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Accueil", path: "/" },
+            { name: "Actualités", path: "/actualites" },
+            { name: article.title, path: `/actualites/${article.slug}` },
+          ]),
+          articleSchema(article),
+        ]}
+      />
       <BackLink href="/actualites" label="Toutes les actualités" />
 
       <header className="mt-6 space-y-4">

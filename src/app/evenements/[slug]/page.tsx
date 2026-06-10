@@ -6,8 +6,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Markdown } from "@/components/Markdown";
 import { BackLink } from "@/components/BackLink";
+import { JsonLd } from "@/components/JsonLd";
 import { getEvent, getEvents } from "@/lib/content";
 import { formatDateTime } from "@/lib/format";
+import { breadcrumbSchema, eventSchema } from "@/lib/json-ld";
+import { buildMetadata, DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -22,16 +25,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
   const event = await getEvent(slug);
   if (!event) return {};
-  return {
+  return buildMetadata({
     title: event.seoTitle ?? event.title,
     description: event.seoDescription ?? event.excerpt,
-    openGraph: {
-      title: event.seoTitle ?? event.title,
-      description: event.seoDescription ?? event.excerpt,
-      type: "article",
-      images: event.coverImage ? [event.coverImage] : undefined,
-    },
-  };
+    path: `/evenements/${event.slug}`,
+    image: event.coverImage ?? DEFAULT_OG_IMAGE,
+    type: "article",
+    publishedTime: event.startDate,
+  });
 }
 
 export default async function EventPage({ params }: Params) {
@@ -42,6 +43,16 @@ export default async function EventPage({ params }: Params) {
 
   return (
     <article className="container max-w-3xl py-12 md:py-16">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Accueil", path: "/" },
+            { name: "Événements", path: "/evenements" },
+            { name: event.title, path: `/evenements/${event.slug}` },
+          ]),
+          eventSchema(event),
+        ]}
+      />
       <BackLink href="/evenements" label="Tous les événements" />
 
       <header className="mt-6 space-y-4">

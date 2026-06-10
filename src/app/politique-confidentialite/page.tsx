@@ -4,12 +4,14 @@ import {
   ToComplete,
 } from "@/components/sections/LegalPageLayout";
 import { getSettings } from "@/lib/content";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Politique de confidentialité",
   description:
     "Politique de confidentialité du site de l'association Je vis en Rose : traitement des données du formulaire de contact.",
-};
+  path: "/politique-confidentialite",
+});
 
 export default async function PolitiqueConfidentialitePage() {
   const settings = await getSettings();

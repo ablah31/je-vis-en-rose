@@ -6,7 +6,7 @@ import { getPage, getSettings } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return pageMetadata(await getPage("contact"));
+  return pageMetadata(await getPage("contact"), "/contact");
 }
 
 export default async function ContactPage() {

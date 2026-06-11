@@ -1,6 +1,6 @@
 ---
 title: Journée Cocooning
-slug: journée-cocooning
+slug: journee-cocooning
 startDate: 2026-03-28T10:00:00.000Z
 endDate: 2026-03-28T14:20:24.002Z
 location: Colomiers
@@ -17,4 +17,4 @@ seoDescription: 'Journée Cocooning : 4 soins et ateliers offerts aux personnes 
 > Une Journée Cocooning pour se réconcilier avec son corps et échanger de beaux moments avec les autres malades et les bénévoles. \
 > 4 soins et ateliers offerts (2 individuels et 2 en groupe) mais aussi de délicieuses douceurs salées et sucrées, à déguster tout au long de la journée : petit déjeuner, repas de midi, goûter et… jus de fruits frais à la demande. \
 > Au programme : socio esthétique, stretching postural, escrime, cuisine et bien d'autres ateliers à savourer tout seul ou en groupe. \
-> Inscription vis la QRcode présent sur l'affiche. 
+> Inscription vis la QRcode présent sur l'affiche.

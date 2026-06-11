@@ -11,6 +11,7 @@ import type {
   SiteSettings,
   Testimonial,
 } from "@/types/content";
+import { normalizeSlug } from "@/lib/slug";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
@@ -44,9 +45,11 @@ export const getArticles = cache(async (): Promise<Article[]> => {
         "utf8",
       );
       const { data, content } = matter(raw);
+      const rawSlug =
+        (data.slug as string) || file.replace(/\.md$/, "");
       return {
         ...(data as Omit<Article, "body">),
-        slug: (data.slug as string) || file.replace(/\.md$/, ""),
+        slug: normalizeSlug(rawSlug),
         body: content.trim(),
       } as Article;
     }),
@@ -59,7 +62,8 @@ export const getArticles = cache(async (): Promise<Article[]> => {
 export const getArticle = cache(
   async (slug: string): Promise<Article | null> => {
     const articles = await getArticles();
-    return articles.find((a) => a.slug === slug) ?? null;
+    const normalized = normalizeSlug(slug);
+    return articles.find((a) => a.slug === normalized) ?? null;
   },
 );
 
@@ -72,9 +76,11 @@ export const getEvents = cache(async (): Promise<EventItem[]> => {
         "utf8",
       );
       const { data, content } = matter(raw);
+      const rawSlug =
+        (data.slug as string) || file.replace(/\.md$/, "");
       return {
         ...(data as Omit<EventItem, "body">),
-        slug: (data.slug as string) || file.replace(/\.md$/, ""),
+        slug: normalizeSlug(rawSlug),
         body: content.trim(),
       } as EventItem;
     }),
@@ -87,7 +93,8 @@ export const getEvents = cache(async (): Promise<EventItem[]> => {
 export const getEvent = cache(
   async (slug: string): Promise<EventItem | null> => {
     const events = await getEvents();
-    return events.find((e) => e.slug === slug) ?? null;
+    const normalized = normalizeSlug(slug);
+    return events.find((e) => e.slug === normalized) ?? null;
   },
 );
 

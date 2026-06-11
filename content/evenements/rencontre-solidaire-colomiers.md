@@ -4,9 +4,9 @@ slug: Septembre-en-Or-Colomiers
 startDate: 2026-09-26T14:00:00.000Z
 endDate: 2026-09-26T06:13:21.270Z
 location: Colomiers
-address: 'Salle municipale, Colomiers'
-excerpt: 'Un moment d''échange, d''écoute et de solidarité autour de l''accompagnement des personnes concernées par le cancer.'
-coverImage: /images/evenement-rencontre.jpg
+address: Colomiers
+excerpt: 'Une Journée en Or faite de soins et d''ateliers ludiques pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
+coverImage: /images/WhatsApp-Image-2026-06-05-at-12.57.54.jpeg
 coverImageAlt: Personnes réunies autour d'une table lors d'une rencontre solidaire
 registrationUrl: ''
 isPastEvent: false

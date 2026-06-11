@@ -1,6 +1,6 @@
 ---
 title: 'Journée Cocooning : une 2ème édition extraordinaire !'
-slug: journée-cocooning
+slug: journee-cocooning
 date: 2026-03-28T01:00:00.000Z
 excerpt: 'Je Vis en Rose organise une Journée Cocooning pour toutes les personnes atteintes d''un cancer. '
 coverImage: /images/Capture-d%E2%80%99%C3%A9cran-2026-06-05-123447.png

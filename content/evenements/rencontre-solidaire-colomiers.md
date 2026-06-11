@@ -15,4 +15,5 @@ seoDescription: 'Participez à la Journée en Or pour les enfants atteints d''un
 ---
 
 > Méconnu, Septembre en Or est le mois de sensibilisation aux cancers pédiatriques, dont le nombre explose ces dernières années. \
-> L'association Je Vis en Rose organise une Journée en Or pour offrir aux enfants et adolescents atteints d'un cancer une journée de plaisir et de douceur. Leurs parents et frères et sœurs sont invités à venir partager ce moment.  
+> L'association Je Vis en Rose organise une Journée en Or pour offrir aux enfants et adolescents atteints d'un cancer une journée de plaisir et de douceur. Leurs parents et frères et sœurs sont invités à venir partager ce moment avec eux et bénéficier eux aussi des mêmes soins et ateliers. N'oublions pas leurs soignants, si importants, qui pourront eux aussi se faire traiter et masser en toute sérénité. \
+> Chaque famille aura sa propre salle 

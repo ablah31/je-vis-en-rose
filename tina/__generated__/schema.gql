@@ -177,7 +177,6 @@ type PagesConnection implements Connection {
 type Actualites implements Node & Document {
   title: String!
   slug: String!
-  date: String!
   excerpt: String
   coverImage: String
   coverImageAlt: String
@@ -190,14 +189,6 @@ type Actualites implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
-}
-
-input DatetimeFilter {
-  after: String
-  before: String
-  eq: String
-  exists: Boolean
-  in: [String]
 }
 
 input BooleanFilter {
@@ -214,7 +205,6 @@ input RichTextFilter {
 input ActualitesFilter {
   title: StringFilter
   slug: StringFilter
-  date: DatetimeFilter
   excerpt: StringFilter
   coverImage: ImageFilter
   coverImageAlt: StringFilter
@@ -255,6 +245,14 @@ type Evenements implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input DatetimeFilter {
+  after: String
+  before: String
+  eq: String
+  exists: Boolean
+  in: [String]
 }
 
 input EvenementsFilter {
@@ -463,7 +461,6 @@ input PagesMutation {
 input ActualitesMutation {
   title: String
   slug: String
-  date: String
   excerpt: String
   coverImage: String
   coverImageAlt: String

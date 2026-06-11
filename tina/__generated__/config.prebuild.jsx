@@ -107,13 +107,8 @@ var config_default = defineConfig({
             type: "string",
             name: "slug",
             label: "Slug (URL)",
-            required: true
-          },
-          {
-            type: "datetime",
-            name: "date",
-            label: "Date",
-            required: true
+            required: true,
+            description: "Adresse de la page (ex. journee-en-or). Utilisez des minuscules, sans accents ni espaces."
           },
           {
             type: "string",
@@ -156,7 +151,8 @@ var config_default = defineConfig({
             type: "string",
             name: "slug",
             label: "Slug (URL)",
-            required: true
+            required: true,
+            description: "Adresse de la page (ex. journee-cocooning). Utilisez des minuscules, sans accents ni espaces."
           },
           {
             type: "datetime",

@@ -335,7 +335,6 @@ export type Actualites = Node & Document & {
   __typename?: 'Actualites';
   title: Scalars['String']['output'];
   slug: Scalars['String']['output'];
-  date: Scalars['String']['output'];
   excerpt?: Maybe<Scalars['String']['output']>;
   coverImage?: Maybe<Scalars['String']['output']>;
   coverImageAlt?: Maybe<Scalars['String']['output']>;
@@ -348,14 +347,6 @@ export type Actualites = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
-};
-
-export type DatetimeFilter = {
-  after?: InputMaybe<Scalars['String']['input']>;
-  before?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type BooleanFilter = {
@@ -372,7 +363,6 @@ export type RichTextFilter = {
 export type ActualitesFilter = {
   title?: InputMaybe<StringFilter>;
   slug?: InputMaybe<StringFilter>;
-  date?: InputMaybe<DatetimeFilter>;
   excerpt?: InputMaybe<StringFilter>;
   coverImage?: InputMaybe<ImageFilter>;
   coverImageAlt?: InputMaybe<StringFilter>;
@@ -416,6 +406,14 @@ export type Evenements = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type DatetimeFilter = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type EvenementsFilter = {
@@ -741,7 +739,6 @@ export type PagesMutation = {
 export type ActualitesMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   slug?: InputMaybe<Scalars['String']['input']>;
-  date?: InputMaybe<Scalars['String']['input']>;
   excerpt?: InputMaybe<Scalars['String']['input']>;
   coverImage?: InputMaybe<Scalars['String']['input']>;
   coverImageAlt?: InputMaybe<Scalars['String']['input']>;
@@ -803,7 +800,7 @@ export type SettingsMutation = {
 
 export type PagesPartsFragment = { __typename: 'Pages', title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null, linkUrl?: string | null } | null> | null };
 
-export type ActualitesPartsFragment = { __typename: 'Actualites', title: string, slug: string, date: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null };
+export type ActualitesPartsFragment = { __typename: 'Actualites', title: string, slug: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null };
 
 export type EvenementsPartsFragment = { __typename: 'Evenements', title: string, slug: string, startDate: string, endDate?: string | null, location: string, address?: string | null, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, registrationUrl?: string | null, isPastEvent?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null };
 
@@ -837,7 +834,7 @@ export type ActualitesQueryVariables = Exact<{
 }>;
 
 
-export type ActualitesQuery = { __typename?: 'Query', actualites: { __typename: 'Actualites', id: string, title: string, slug: string, date: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type ActualitesQuery = { __typename?: 'Query', actualites: { __typename: 'Actualites', id: string, title: string, slug: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type ActualitesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -849,7 +846,7 @@ export type ActualitesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ActualitesConnectionQuery = { __typename?: 'Query', actualitesConnection: { __typename?: 'ActualitesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ActualitesConnectionEdges', cursor: string, node?: { __typename: 'Actualites', id: string, title: string, slug: string, date: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type ActualitesConnectionQuery = { __typename?: 'Query', actualitesConnection: { __typename?: 'ActualitesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ActualitesConnectionEdges', cursor: string, node?: { __typename: 'Actualites', id: string, title: string, slug: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type EvenementsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -955,7 +952,6 @@ export const ActualitesPartsFragmentDoc = gql`
   __typename
   title
   slug
-  date
   excerpt
   coverImage
   coverImageAlt

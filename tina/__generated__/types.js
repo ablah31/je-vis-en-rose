@@ -33,7 +33,6 @@ export const ActualitesPartsFragmentDoc = gql`
   __typename
   title
   slug
-  date
   excerpt
   coverImage
   coverImageAlt

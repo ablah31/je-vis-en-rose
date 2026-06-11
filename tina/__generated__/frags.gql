@@ -24,7 +24,6 @@ fragment ActualitesParts on Actualites {
   __typename
   title
   slug
-  date
   excerpt
   coverImage
   coverImageAlt

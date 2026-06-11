@@ -7,15 +7,12 @@ location: Colomiers
 address: Colomiers
 excerpt: 'Une Journée en Or faite de soins et d''ateliers ludiques pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
 coverImage: /images/WhatsApp-Image-2026-06-05-at-12.57.54.jpeg
-coverImageAlt: Personnes réunies autour d'une table lors d'une rencontre solidaire
+coverImageAlt: Affiche de la Journée en Or de Septembre en Or
 registrationUrl: ''
 isPastEvent: false
-seoTitle: Rencontre solidaire à Colomiers — Je vis en Rose
-seoDescription: Participez à une rencontre solidaire organisée par Je vis en Rose à Colomiers.
+seoTitle: Septembre en Or à Colomiers — Je vis en Rose
+seoDescription: 'Participez à la Journée en Or pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
 ---
 
-Rejoignez-nous pour une après-midi d'échange et de partage, dans un cadre chaleureux et bienveillant.
-
-Au programme : témoignages, discussions libres et goûter convivial. Entrée libre.
-
-> Contenu de démonstration à remplacer par l'association.
+> Méconnu, Septembre en Or est le mois de sensibilisation aux cancers pédiatriques, dont le nombre explose ces dernières années. \
+> L'association Je Vis en Rose organise une Journée en Or pour offrir aux enfants et adolescents atteints d'un cancer une journée de plaisir et de douceur. Leurs parents et frères et sœurs sont invités à venir partager ce moment.  

@@ -14,4 +14,5 @@ seoTitle: Journée Cocooning 2026— Je vis en Rose
 seoDescription: 'Journée Cocooning : 4 soins et ateliers offerts aux personnes atteintes d''un cancer. '
 ---
 
->
+> Une Journée Cocooning pour se réconcilier avec son corps et échanger de beaux moments avec les autres malades et les bénévoles. \
+> 4 soins et ateliers offerts (2 individuels et 2 en groupe) mais aussi de délicieuses douceurs salées et sucrées, à déguster tout au long de la journée : petit déjeuner, repas de midi, goûter et… jus de fruits frais à la demande. 

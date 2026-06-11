@@ -1,7 +1,7 @@
 {
   "name": "Crédit Agricole",
   "logo": "/images/Credit-Agricole-Logo.png",
-  "websiteUrl": "",
+  "websiteUrl": "https://www.credit-agricole.fr/",
   "order": 4,
   "published": true
 }

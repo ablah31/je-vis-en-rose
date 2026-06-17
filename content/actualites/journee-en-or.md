@@ -12,6 +12,8 @@ seoTitle: Notre Journée en Or - Je Vis en Rose
 seoDescription: 'Je Vis en Rose organise une journée en Or pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
 ---
 
+Le nombre de cancers explose chez nos enfants ces dernières années. 
+
 Je Vis en Rose organise une journée en Or pour les enfants atteints d'un cancer et leurs familles, qui ont tendance à s'oublier le temps de la maladie. S'il est dur d'accompagner des adultes malades, voir des enfants souffrir et trop souvent, partir, est terrible ; nous voulons donc offrir un peu de douceur et de réconfort aussi à celles et ceux qui les accompagnent tout au long de la maladie : leurs soignants.
 
 Soins individuels, ateliers en famille ou en groupe et de nombreuses surprises. Du bonheur et de la douceur en perspective !

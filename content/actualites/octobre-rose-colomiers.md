@@ -17,3 +17,5 @@ au dépistage du cancer du sein et récolter des fonds afin de soutenir les pers
 
 Au programme : stands de vente et d'information, marche rose, rencontres conviviales.
 Les ventes réalisées tout au long de l'année, et principalement durant Octobre Rose, nous permettent d'offrir des soins de support à toute personne atteinte d'un cancer lors de la Journée Cocooning et à nos adhérents tout le reste de l'année. 
+
+En octobre, vous aussi, soyez rose! 

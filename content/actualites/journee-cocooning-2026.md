@@ -14,15 +14,15 @@ seoDescription: Une journée plaisir et douceur à Colomiers pour toutes les per
 
 Au programme : massages, réflexologie plantaire, sophrologie, escrime et bien d'autres soins et ateliers, individuels ou en groupe, plein de bonnes choses à boire et à grignoter, mais surtout, beaucoup de sourires et de bonheur.
 
-En chiffres, cela donne : 
+En chiffres, cela donne :
 
 * 85 participants
 * 33 ateliers
 * 18 bénévoles
 * 35 animateurs
 
-La deuxième édition, qui s'est étalée sur la journée, a permis a chacun de faire de belles rencontres, notamment lors du délicieux repas de midi, préparé par Xavier, le chef du Lab culinaire de Colomiers, et son équipe enjouée. Tout le monde a pu se détendre et repartir avec le sourire et un sac bien plein de produits pour se chouchouter. 
+La deuxième édition, qui s'est étalée sur la journée, a permis a chacun de faire de belles rencontres, notamment lors du délicieux repas de midi, préparé par Xavier, le chef du Lab culinaire de Colomiers, et son équipe enjouée. Tout le monde a pu se détendre et repartir avec le sourire et un sac bien plein de produits pour se chouchouter.
 
-L'intégralité de la journée était offerte aux personnes atteintes d'un cancer par l'association Je Vis en Rose et ses nombreux partenaires que nous remercions chaleureusement ainsi que grâce à la générosité des intervenants et des bénévoles. 
+L'intégralité de la journée était offerte aux personnes atteintes d'un cancer par l'association Je Vis en Rose et ses nombreux partenaires que nous remercions chaleureusement, ainsi que grâce à la générosité des intervenants et des bénévoles.
 
 Rendez-vous l'année prochaine pour la troisième édition.

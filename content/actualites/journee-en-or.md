@@ -9,7 +9,7 @@ category: Journée en Or
 author: Je Vis en Rose
 featured: true
 seoTitle: Notre Journée en Or - Je Vis en Rose
-seoDescription: 'Je Vis en Rose organise une journée en Or pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
+seoDescription: 'Je Vis en Rose organise une Journée en Or pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
 ---
 
 Le nombre de cancers explose chez nos enfants ces dernières années.

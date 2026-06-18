@@ -3,7 +3,7 @@ date: '2026-09-26T10:57:56.539Z'
 title: 'Septembre en Or : une journée en Or'
 slug: journee-en-or
 excerpt: 'Septembre en Or, le mois de sensibilisation aux cancers pédiatriques dont personne ne connaît l''existence... Et pourtant...'
-coverImage: /images/Affiche-Journée-en-Or.jpg
+coverImage: /images/Affiche-Journ%C3%A9e-en-Or.jpg
 coverImageAlt: Affiche de la Journée en Or
 category: Journée en Or
 author: Je Vis en Rose

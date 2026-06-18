@@ -6,7 +6,7 @@ endDate: 2026-09-26T06:13:21.270Z
 location: Colomiers
 address: Colomiers
 excerpt: 'Une Journée en Or faite de soins et d''ateliers ludiques pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
-coverImage: /images/WhatsApp-Image-2026-06-05-at-12.57.54.jpeg
+coverImage: /images/Affiche-Journ%C3%A9e-en-Or.jpg
 coverImageAlt: Affiche de la Journée en Or de Septembre en Or
 registrationUrl: ''
 isPastEvent: false

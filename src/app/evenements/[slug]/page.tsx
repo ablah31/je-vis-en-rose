@@ -78,14 +78,15 @@ export default async function EventPage({ params }: Params) {
       </header>
 
       {event.coverImage && (
-        <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-3xl ring-1 ring-border">
+        <div className="mt-8 overflow-hidden rounded-3xl ring-1 ring-border">
           <Image
             src={event.coverImage}
             alt={event.coverImageAlt ?? ""}
-            fill
+            width={0}
+            height={0}
             priority
             sizes="(min-width: 768px) 768px, 100vw"
-            className="object-cover"
+            className="h-auto w-full"
           />
         </div>
       )}

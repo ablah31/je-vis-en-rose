@@ -6,7 +6,7 @@ endDate: 2026-09-26T06:13:21.270Z
 location: Colomiers
 address: Colomiers
 excerpt: 'Une Journée en Or faite de soins et d''ateliers ludiques pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
-coverImage: /images/Affiche-Journ%C3%A9e-en-Or.jpg
+coverImage: /images/Affiche-Journ%C3%A9e-en-Or.png
 coverImageAlt: Affiche de la Journée en Or de Septembre en Or
 registrationUrl: ''
 isPastEvent: false
@@ -19,10 +19,9 @@ seoDescription: 'Participez à la Journée en Or pour les enfants atteints d''un
 > Ceux qui le veulent pourront venir dès 11h30 afin de partager un repas spécialement préparé pour les enfants petits et grands. \
 > Dans l'après midi, chaque famille aura sa propre salle pour bénéficier de 2 soins individuels avant de partager un atelier en famille. Ensuite chaque membre de la famille pourra rejoindre les ateliers de son choix avant de terminer l'après midi autour d'un délicieux goûter.\
 > Au programme : ostéopathie, réflexologie plantaire, sophrologie, escrime, art thérapie et bien d'autres ateliers et surprises. \
-> Pour vous inscrire, appelez nous au 07 58 16 22 13 ou envoyez nous un mail à [jevisenrose1@gmail.com](mailto:jevisenrose1@gmail.com) en laissant vos coordonnées et nous vous rappellerons.\
->
+> Pour vous inscrire, appelez nous au 07 58 16 22 13 ou envoyez nous un mail à [jevisenrose1@gmail.com](mailto:jevisenrose1@gmail.com) en laissant vos coordonnées et nous vous rappellerons.\\
 
-Si vous voulez nous aider à financer cette journée, nous avons lancé une campagne de crowdfunding : 
+Si vous voulez nous aider à financer cette journée, nous avons lancé une campagne de crowdfunding :
 
 [https://www.helloasso.com/associations/je-vis-en-rose/collectes/septembre-en-or](https://www.helloasso.com/associations/je-vis-en-rose/collectes/septembre-en-or)
 

@@ -7,7 +7,7 @@ coverImageAlt: Affiche de la campagne Septembre en OR
 category: Communication
 author: Je vis en Rose
 featured: true
-seoTitle: Septembre en Or - Je Vis en Rose
+seoTitle: septembre en or - Je Vis en Rose
 seoDescription: Mois de sensibilisation aux cancers pédiatriques
 ---
 

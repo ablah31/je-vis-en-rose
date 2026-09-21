@@ -1,5 +1,5 @@
 ---
-title: Assiette Rose
+title: assiette rose
 slug: assiette-rose
 excerpt: 'Assiette Rose, repas gastronomique au bénéfice de Je Vis en Rose, dans le cadre d''Octobre Rose.'
 coverImage: ''

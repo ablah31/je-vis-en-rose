@@ -15,6 +15,14 @@ const STATIC_PATHS = [
   "/politique-confidentialite",
 ];
 
+// CMS entries may have a missing or malformed date; omit lastModified rather
+// than letting an invalid Date crash sitemap generation.
+function toValidDate(value: string | undefined): Date | undefined {
+  if (!value) return undefined;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? undefined : date;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [articles, events] = await Promise.all([getArticles(), getEvents()]);
 
@@ -27,14 +35,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((article) => ({
     url: `${SITE_URL}/actualites/${article.slug}`,
-    lastModified: new Date(article.date),
+    lastModified: toValidDate(article.date),
     changeFrequency: "yearly",
     priority: 0.6,
   }));
 
   const eventEntries: MetadataRoute.Sitemap = events.map((event) => ({
     url: `${SITE_URL}/evenements/${event.slug}`,
-    lastModified: new Date(event.startDate),
+    lastModified: toValidDate(event.startDate),
     changeFrequency: "yearly",
     priority: 0.6,
   }));

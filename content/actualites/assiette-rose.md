@@ -1,5 +1,5 @@
 ---
-title: assiette rose
+title: 'Un repas gastronomique : régalons nous pour la bonne cause!'
 slug: assiette-rose
 excerpt: 'Assiette Rose, repas gastronomique au bénéfice de Je Vis en Rose, dans le cadre d''Octobre Rose.'
 coverImage: /images/Affiche-Assiette-Rose-2026.jpg
@@ -11,7 +11,7 @@ seoTitle: Assiette Rose - Je Vis en Rose
 seoDescription: 'Repas gastronomique au bénéfice de Je Vis en Rose, dans le cadre d''Octobre Rose. '
 ---
 
-Je Vis en Rose vous propose de partager un repas gastronomique le 11 octobre à Colomiers, dans le cadre d'Octobre Rose. L'intégralité des fonds sera reversée à l'association afin de financer la recherche médicale et d'offrir des soins de support aux personnes atteintes d'un cancer. Alors venez vous régaler à la table de Xavier, le grand chef du Lab Culinaire de Colomiers. 
+Je Vis en Rose vous propose de partager un repas gastronomique le 11 octobre à Colomiers, dans le cadre d'Octobre Rose. L'intégralité des fonds sera reversée à l'association afin de financer la recherche médicale et d'offrir des soins de support aux personnes atteintes d'un cancer. Alors venez vous régaler à la table de Xavier, le grand chef du Lab Culinaire de Colomiers.
 
 Une vente aux enchères vous permettra de vous offrir de jolies toiles à prix raisonnables.
 

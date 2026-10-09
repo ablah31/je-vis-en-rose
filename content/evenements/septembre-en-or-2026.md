@@ -6,23 +6,14 @@ endDate: 2026-09-26T06:13:21.270Z
 location: Colomiers
 address: Colomiers
 excerpt: 'Une Journée en Or faite de soins et d''ateliers ludiques pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
-coverImage: /images/Affiche-Journ%C3%A9e-en-Or.png
-coverImageAlt: Affiche de la Journée en Or de Septembre en Or
+coverImage: /images/clowns-Journée-en-Or-2026.jpeg
+coverImageAlt: 'Photo Clowns '
 registrationUrl: ''
 isPastEvent: false
 seoTitle: Septembre en Or à Colomiers — Je vis en Rose
 seoDescription: 'Participez à la Journée en Or pour les enfants atteints d''un cancer, leurs familles et leurs soignants. '
 ---
 
-> Méconnu, Septembre en Or est le mois de sensibilisation aux cancers pédiatriques, dont le nombre explose ces dernières années.  \
-> L'association Je Vis en Rose organise une Journée en Or pour offrir aux enfants et adolescents atteints d'un cancer une journée de plaisir et de douceur. Leurs parents et frères et sœurs sont invités à venir partager ce moment avec eux et bénéficier eux aussi des mêmes soins et ateliers. N'oublions pas leurs soignants, si importants, qui pourront eux aussi se faire traiter et masser en toute sérénité. \
-> Ceux qui le veulent pourront venir dès 11h30 afin de partager un repas spécialement préparé pour les enfants petits et grands. \
-> Dans l'après midi, chaque famille aura sa propre salle pour bénéficier de 2 soins individuels avant de partager un atelier en famille. Ensuite chaque membre de la famille pourra rejoindre les ateliers de son choix avant de terminer l'après midi autour d'un délicieux goûter.\
-> Au programme : ostéopathie, réflexologie plantaire, sophrologie, escrime, art thérapie et bien d'autres ateliers et surprises. \
-> Pour vous inscrire, appelez nous au 07 58 16 22 13 ou envoyez nous un mail à [jevisenrose1@gmail.com](mailto:jevisenrose1@gmail.com) en laissant vos coordonnées et nous vous rappellerons.\\
-
-Si vous voulez nous aider à financer cette journée, nous avons lancé une campagne de crowdfunding :
-
-[https://www.helloasso.com/associations/je-vis-en-rose/collectes/septembre-en-or](https://www.helloasso.com/associations/je-vis-en-rose/collectes/septembre-en-or)
-
-![](/images/QR-Code-crowdfunding-Journ%C3%A9e-en-Or-2026.png)
+> La Journée en Or, organisée par Je Vis en Rose a été une très belle journée. Les enfants malades, leurs familles et leurs soignants ont pu profiter d'une petite parenthèse de bonheur dans un  quotidien difficile. De nombreux soins (réflexologie plantaire, socio esthétique, ostéopathie…) et ateliers (art thérapie, escrime, sophrologie…) variés leur étaient offerts, le tout agrémenté d'un délicieux repas spécialement concocté pour les enfants et d'un goûter préparé par tous les volontaires. N'oublions pas nos clowns qui nous ont beaucoup fait rire. \
+> &#x20;Un vrai moment de bonheur pour les familles mais aussi pour tous les intervenants, la plupart bénévoles, ravis d'avoir pu offrir un peu de douceur. \
+> Un grand MERCI à tous ! Rendez vous l'année prochaine! 

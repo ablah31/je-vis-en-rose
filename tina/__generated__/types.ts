@@ -7,13 +7,13 @@
     })
     return str
   }
-  export type Maybe<T> = T | null;
-export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
-export type MakeEmpty<T extends { [key: string]: unknown }, K extends keyof T> = { [_ in K]?: never };
+  import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
+/** Internal type. DO NOT USE DIRECTLY. */
+type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+/** Internal type. DO NOT USE DIRECTLY. */
 export type Incremental<T> = T | { [P in keyof T]?: P extends ' $fragmentName' | '__typename' ? T[P] : never };
+export type Maybe<T> = T | null;
+export type InputMaybe<T> = Maybe<T>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: { input: string; output: string; }
@@ -24,6 +24,8 @@ export type Scalars = {
   /** References another document, used as a foreign key */
   Reference: { input: any; output: any; }
   JSON: { input: any; output: any; }
+  /** A rich-text document, renderable by TinaMarkdown */
+  RichText: { input: TinaMarkdownContent; output: TinaMarkdownContent; }
 };
 
 export type SystemInfo = {
@@ -343,7 +345,7 @@ export type Actualites = Node & Document & {
   featured?: Maybe<Scalars['Boolean']['output']>;
   seoTitle?: Maybe<Scalars['String']['output']>;
   seoDescription?: Maybe<Scalars['String']['output']>;
-  body?: Maybe<Scalars['JSON']['output']>;
+  body?: Maybe<Scalars['RichText']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -402,7 +404,7 @@ export type Evenements = Node & Document & {
   isPastEvent?: Maybe<Scalars['Boolean']['output']>;
   seoTitle?: Maybe<Scalars['String']['output']>;
   seoDescription?: Maybe<Scalars['String']['output']>;
-  body?: Maybe<Scalars['JSON']['output']>;
+  body?: Maybe<Scalars['RichText']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -747,7 +749,7 @@ export type ActualitesMutation = {
   featured?: InputMaybe<Scalars['Boolean']['input']>;
   seoTitle?: InputMaybe<Scalars['String']['input']>;
   seoDescription?: InputMaybe<Scalars['String']['input']>;
-  body?: InputMaybe<Scalars['JSON']['input']>;
+  body?: InputMaybe<Scalars['RichText']['input']>;
 };
 
 export type EvenementsMutation = {
@@ -764,7 +766,7 @@ export type EvenementsMutation = {
   isPastEvent?: InputMaybe<Scalars['Boolean']['input']>;
   seoTitle?: InputMaybe<Scalars['String']['input']>;
   seoDescription?: InputMaybe<Scalars['String']['input']>;
-  body?: InputMaybe<Scalars['JSON']['input']>;
+  body?: InputMaybe<Scalars['RichText']['input']>;
 };
 
 export type TemoignagesMutation = {
@@ -798,131 +800,258 @@ export type SettingsMutation = {
   helloAssoUrl?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type PagesPartsFragment = { __typename: 'Pages', title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null, linkUrl?: string | null } | null> | null };
+export type StringFilter = {
+  startsWith?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<string | null | undefined> | null | undefined;
+};
 
-export type ActualitesPartsFragment = { __typename: 'Actualites', title: string, slug: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null };
+export type ImageFilter = {
+  startsWith?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<string | null | undefined> | null | undefined;
+};
 
-export type EvenementsPartsFragment = { __typename: 'Evenements', title: string, slug: string, startDate: string, endDate?: string | null, location: string, address?: string | null, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, registrationUrl?: string | null, isPastEvent?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null };
+export type PagesSectionsFilter = {
+  _template?: StringFilter | null | undefined;
+  heading?: StringFilter | null | undefined;
+  body?: StringFilter | null | undefined;
+  linkUrl?: StringFilter | null | undefined;
+};
 
-export type TemoignagesPartsFragment = { __typename: 'Temoignages', name: string, role?: string | null, quote: string, image?: string | null, published?: boolean | null, order?: number | null };
+export type PagesFilter = {
+  title?: StringFilter | null | undefined;
+  seoTitle?: StringFilter | null | undefined;
+  seoDescription?: StringFilter | null | undefined;
+  heroTitle?: StringFilter | null | undefined;
+  heroSubtitle?: StringFilter | null | undefined;
+  heroImage?: ImageFilter | null | undefined;
+  heroImageAlt?: StringFilter | null | undefined;
+  ctaLabel?: StringFilter | null | undefined;
+  ctaUrl?: StringFilter | null | undefined;
+  ctaSecondaryLabel?: StringFilter | null | undefined;
+  ctaSecondaryUrl?: StringFilter | null | undefined;
+  sections?: PagesSectionsFilter | null | undefined;
+};
 
-export type PartenairesPartsFragment = { __typename: 'Partenaires', name: string, logo?: string | null, websiteUrl?: string | null, order?: number | null, published?: boolean | null };
+export type BooleanFilter = {
+  eq?: boolean | null | undefined;
+  exists?: boolean | null | undefined;
+};
 
-export type SettingsPartsFragment = { __typename: 'Settings', siteName: string, siteDescription?: string | null, logo?: string | null, email: string, phone?: string | null, address?: string | null, facebookUrl?: string | null, instagramUrl?: string | null, youtubeUrl?: string | null, linkedinUrl?: string | null, helloAssoUrl: string };
+export type RichTextFilter = {
+  startsWith?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+};
+
+export type ActualitesFilter = {
+  title?: StringFilter | null | undefined;
+  slug?: StringFilter | null | undefined;
+  excerpt?: StringFilter | null | undefined;
+  coverImage?: ImageFilter | null | undefined;
+  coverImageAlt?: StringFilter | null | undefined;
+  category?: StringFilter | null | undefined;
+  author?: StringFilter | null | undefined;
+  featured?: BooleanFilter | null | undefined;
+  seoTitle?: StringFilter | null | undefined;
+  seoDescription?: StringFilter | null | undefined;
+  body?: RichTextFilter | null | undefined;
+};
+
+export type DatetimeFilter = {
+  after?: string | null | undefined;
+  before?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<string | null | undefined> | null | undefined;
+};
+
+export type EvenementsFilter = {
+  title?: StringFilter | null | undefined;
+  slug?: StringFilter | null | undefined;
+  startDate?: DatetimeFilter | null | undefined;
+  endDate?: DatetimeFilter | null | undefined;
+  location?: StringFilter | null | undefined;
+  address?: StringFilter | null | undefined;
+  excerpt?: StringFilter | null | undefined;
+  coverImage?: ImageFilter | null | undefined;
+  coverImageAlt?: StringFilter | null | undefined;
+  registrationUrl?: StringFilter | null | undefined;
+  isPastEvent?: BooleanFilter | null | undefined;
+  seoTitle?: StringFilter | null | undefined;
+  seoDescription?: StringFilter | null | undefined;
+  body?: RichTextFilter | null | undefined;
+};
+
+export type NumberFilter = {
+  lt?: number | null | undefined;
+  lte?: number | null | undefined;
+  gte?: number | null | undefined;
+  gt?: number | null | undefined;
+  eq?: number | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<number | null | undefined> | null | undefined;
+};
+
+export type TemoignagesFilter = {
+  name?: StringFilter | null | undefined;
+  role?: StringFilter | null | undefined;
+  quote?: StringFilter | null | undefined;
+  image?: ImageFilter | null | undefined;
+  published?: BooleanFilter | null | undefined;
+  order?: NumberFilter | null | undefined;
+};
+
+export type PartenairesFilter = {
+  name?: StringFilter | null | undefined;
+  logo?: ImageFilter | null | undefined;
+  websiteUrl?: StringFilter | null | undefined;
+  order?: NumberFilter | null | undefined;
+  published?: BooleanFilter | null | undefined;
+};
+
+export type SettingsFilter = {
+  siteName?: StringFilter | null | undefined;
+  siteDescription?: StringFilter | null | undefined;
+  logo?: ImageFilter | null | undefined;
+  email?: StringFilter | null | undefined;
+  phone?: StringFilter | null | undefined;
+  address?: StringFilter | null | undefined;
+  facebookUrl?: StringFilter | null | undefined;
+  instagramUrl?: StringFilter | null | undefined;
+  youtubeUrl?: StringFilter | null | undefined;
+  linkedinUrl?: StringFilter | null | undefined;
+  helloAssoUrl?: StringFilter | null | undefined;
+};
+
+export type PagesPartsFragment = { __typename: 'Pages', title: string, seoTitle: string | null, seoDescription: string | null, heroTitle: string | null, heroSubtitle: string | null, heroImage: string | null, heroImageAlt: string | null, ctaLabel: string | null, ctaUrl: string | null, ctaSecondaryLabel: string | null, ctaSecondaryUrl: string | null, sections: Array<{ __typename: 'PagesSections', _template: string | null, heading: string | null, body: string | null, linkUrl: string | null } | null> | null };
+
+export type ActualitesPartsFragment = { __typename: 'Actualites', title: string, slug: string, excerpt: string | null, coverImage: string | null, coverImageAlt: string | null, category: string | null, author: string | null, featured: boolean | null, seoTitle: string | null, seoDescription: string | null, body: TinaMarkdownContent | null };
+
+export type EvenementsPartsFragment = { __typename: 'Evenements', title: string, slug: string, startDate: string, endDate: string | null, location: string, address: string | null, excerpt: string | null, coverImage: string | null, coverImageAlt: string | null, registrationUrl: string | null, isPastEvent: boolean | null, seoTitle: string | null, seoDescription: string | null, body: TinaMarkdownContent | null };
+
+export type TemoignagesPartsFragment = { __typename: 'Temoignages', name: string, role: string | null, quote: string, image: string | null, published: boolean | null, order: number | null };
+
+export type PartenairesPartsFragment = { __typename: 'Partenaires', name: string, logo: string | null, websiteUrl: string | null, order: number | null, published: boolean | null };
+
+export type SettingsPartsFragment = { __typename: 'Settings', siteName: string, siteDescription: string | null, logo: string | null, email: string, phone: string | null, address: string | null, facebookUrl: string | null, instagramUrl: string | null, youtubeUrl: string | null, linkedinUrl: string | null, helloAssoUrl: string };
 
 export type PagesQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type PagesQuery = { __typename?: 'Query', pages: { __typename: 'Pages', id: string, title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null, linkUrl?: string | null } | null> | null } };
+export type PagesQuery = { pages: { __typename: 'Pages', id: string, title: string, seoTitle: string | null, seoDescription: string | null, heroTitle: string | null, heroSubtitle: string | null, heroImage: string | null, heroImageAlt: string | null, ctaLabel: string | null, ctaUrl: string | null, ctaSecondaryLabel: string | null, ctaSecondaryUrl: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections: Array<{ __typename: 'PagesSections', _template: string | null, heading: string | null, body: string | null, linkUrl: string | null } | null> | null } };
 
 export type PagesConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<PagesFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: PagesFilter | null | undefined;
 }>;
 
 
-export type PagesConnectionQuery = { __typename?: 'Query', pagesConnection: { __typename?: 'PagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PagesConnectionEdges', cursor: string, node?: { __typename: 'Pages', id: string, title: string, seoTitle?: string | null, seoDescription?: string | null, heroTitle?: string | null, heroSubtitle?: string | null, heroImage?: string | null, heroImageAlt?: string | null, ctaLabel?: string | null, ctaUrl?: string | null, ctaSecondaryLabel?: string | null, ctaSecondaryUrl?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections?: Array<{ __typename: 'PagesSections', _template?: string | null, heading?: string | null, body?: string | null, linkUrl?: string | null } | null> | null } | null } | null> | null } };
+export type PagesConnectionQuery = { pagesConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Pages', id: string, title: string, seoTitle: string | null, seoDescription: string | null, heroTitle: string | null, heroSubtitle: string | null, heroImage: string | null, heroImageAlt: string | null, ctaLabel: string | null, ctaUrl: string | null, ctaSecondaryLabel: string | null, ctaSecondaryUrl: string | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, sections: Array<{ __typename: 'PagesSections', _template: string | null, heading: string | null, body: string | null, linkUrl: string | null } | null> | null } | null } | null> | null } };
 
 export type ActualitesQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type ActualitesQuery = { __typename?: 'Query', actualites: { __typename: 'Actualites', id: string, title: string, slug: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type ActualitesQuery = { actualites: { __typename: 'Actualites', id: string, title: string, slug: string, excerpt: string | null, coverImage: string | null, coverImageAlt: string | null, category: string | null, author: string | null, featured: boolean | null, seoTitle: string | null, seoDescription: string | null, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type ActualitesConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<ActualitesFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: ActualitesFilter | null | undefined;
 }>;
 
 
-export type ActualitesConnectionQuery = { __typename?: 'Query', actualitesConnection: { __typename?: 'ActualitesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ActualitesConnectionEdges', cursor: string, node?: { __typename: 'Actualites', id: string, title: string, slug: string, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, category?: string | null, author?: string | null, featured?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type ActualitesConnectionQuery = { actualitesConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Actualites', id: string, title: string, slug: string, excerpt: string | null, coverImage: string | null, coverImageAlt: string | null, category: string | null, author: string | null, featured: boolean | null, seoTitle: string | null, seoDescription: string | null, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type EvenementsQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type EvenementsQuery = { __typename?: 'Query', evenements: { __typename: 'Evenements', id: string, title: string, slug: string, startDate: string, endDate?: string | null, location: string, address?: string | null, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, registrationUrl?: string | null, isPastEvent?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type EvenementsQuery = { evenements: { __typename: 'Evenements', id: string, title: string, slug: string, startDate: string, endDate: string | null, location: string, address: string | null, excerpt: string | null, coverImage: string | null, coverImageAlt: string | null, registrationUrl: string | null, isPastEvent: boolean | null, seoTitle: string | null, seoDescription: string | null, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type EvenementsConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<EvenementsFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: EvenementsFilter | null | undefined;
 }>;
 
 
-export type EvenementsConnectionQuery = { __typename?: 'Query', evenementsConnection: { __typename?: 'EvenementsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'EvenementsConnectionEdges', cursor: string, node?: { __typename: 'Evenements', id: string, title: string, slug: string, startDate: string, endDate?: string | null, location: string, address?: string | null, excerpt?: string | null, coverImage?: string | null, coverImageAlt?: string | null, registrationUrl?: string | null, isPastEvent?: boolean | null, seoTitle?: string | null, seoDescription?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type EvenementsConnectionQuery = { evenementsConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Evenements', id: string, title: string, slug: string, startDate: string, endDate: string | null, location: string, address: string | null, excerpt: string | null, coverImage: string | null, coverImageAlt: string | null, registrationUrl: string | null, isPastEvent: boolean | null, seoTitle: string | null, seoDescription: string | null, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type TemoignagesQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type TemoignagesQuery = { __typename?: 'Query', temoignages: { __typename: 'Temoignages', id: string, name: string, role?: string | null, quote: string, image?: string | null, published?: boolean | null, order?: number | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type TemoignagesQuery = { temoignages: { __typename: 'Temoignages', id: string, name: string, role: string | null, quote: string, image: string | null, published: boolean | null, order: number | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type TemoignagesConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<TemoignagesFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: TemoignagesFilter | null | undefined;
 }>;
 
 
-export type TemoignagesConnectionQuery = { __typename?: 'Query', temoignagesConnection: { __typename?: 'TemoignagesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'TemoignagesConnectionEdges', cursor: string, node?: { __typename: 'Temoignages', id: string, name: string, role?: string | null, quote: string, image?: string | null, published?: boolean | null, order?: number | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type TemoignagesConnectionQuery = { temoignagesConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Temoignages', id: string, name: string, role: string | null, quote: string, image: string | null, published: boolean | null, order: number | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type PartenairesQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type PartenairesQuery = { __typename?: 'Query', partenaires: { __typename: 'Partenaires', id: string, name: string, logo?: string | null, websiteUrl?: string | null, order?: number | null, published?: boolean | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type PartenairesQuery = { partenaires: { __typename: 'Partenaires', id: string, name: string, logo: string | null, websiteUrl: string | null, order: number | null, published: boolean | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type PartenairesConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<PartenairesFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: PartenairesFilter | null | undefined;
 }>;
 
 
-export type PartenairesConnectionQuery = { __typename?: 'Query', partenairesConnection: { __typename?: 'PartenairesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PartenairesConnectionEdges', cursor: string, node?: { __typename: 'Partenaires', id: string, name: string, logo?: string | null, websiteUrl?: string | null, order?: number | null, published?: boolean | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type PartenairesConnectionQuery = { partenairesConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Partenaires', id: string, name: string, logo: string | null, websiteUrl: string | null, order: number | null, published: boolean | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type SettingsQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type SettingsQuery = { __typename?: 'Query', settings: { __typename: 'Settings', id: string, siteName: string, siteDescription?: string | null, logo?: string | null, email: string, phone?: string | null, address?: string | null, facebookUrl?: string | null, instagramUrl?: string | null, youtubeUrl?: string | null, linkedinUrl?: string | null, helloAssoUrl: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type SettingsQuery = { settings: { __typename: 'Settings', id: string, siteName: string, siteDescription: string | null, logo: string | null, email: string, phone: string | null, address: string | null, facebookUrl: string | null, instagramUrl: string | null, youtubeUrl: string | null, linkedinUrl: string | null, helloAssoUrl: string, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type SettingsConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<SettingsFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: SettingsFilter | null | undefined;
 }>;
 
 
-export type SettingsConnectionQuery = { __typename?: 'Query', settingsConnection: { __typename?: 'SettingsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SettingsConnectionEdges', cursor: string, node?: { __typename: 'Settings', id: string, siteName: string, siteDescription?: string | null, logo?: string | null, email: string, phone?: string | null, address?: string | null, facebookUrl?: string | null, instagramUrl?: string | null, youtubeUrl?: string | null, linkedinUrl?: string | null, helloAssoUrl: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type SettingsConnectionQuery = { settingsConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Settings', id: string, siteName: string, siteDescription: string | null, logo: string | null, email: string, phone: string | null, address: string | null, facebookUrl: string | null, instagramUrl: string | null, youtubeUrl: string | null, linkedinUrl: string | null, helloAssoUrl: string, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const PagesPartsFragmentDoc = gql`
     fragment PagesParts on Pages {
@@ -1447,7 +1576,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "http://localhost:4001/graphql",
+        url: "https://content.tinajs.io/4.1/content/26b33b2d-174f-44f6-a0d2-915e1aefdfa7/github/main",
         queries,
       })
     )
@@ -1459,5 +1588,7 @@ export const queries = (
   const requester = generateRequester(client)
   return getSdk(requester)
 }
+
+export type { Exact };
 
   

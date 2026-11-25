@@ -10,6 +10,43 @@ interface PageHeroProps {
   className?: string;
 }
 
+const parseSubtitle = (subtitle: string) => {
+  const lines = subtitle
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
+
+  const [intro = "", ...items] = lines;
+
+  return { intro, items };
+};
+
+const HeroSubtitle = ({ text }: { text: string }) => {
+  const { intro, items } = parseSubtitle(text);
+
+  if (!intro) return null;
+
+  if (items.length === 0) {
+    return <p className="text-lg text-foreground/80 md:text-xl">{intro}</p>;
+  }
+
+  return (
+    <div className="space-y-4">
+      <p className="text-lg text-foreground/80 md:text-xl">{intro}</p>
+      <ul className="space-y-2 text-base text-foreground/80 md:text-lg">
+        {items.map((item, index) => (
+          <li key={`${index}-${item}`} className="flex gap-3">
+            <span className="text-rose" aria-hidden="true">
+              –
+            </span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 export function PageHero({
   title,
   subtitle,
@@ -25,9 +62,7 @@ export function PageHero({
           <h1 className="text-4xl font-semibold text-prune md:text-5xl">
             {title}
           </h1>
-          {subtitle && (
-            <p className="text-lg text-foreground/80 md:text-xl">{subtitle}</p>
-          )}
+          {subtitle ? <HeroSubtitle text={subtitle} /> : null}
           {children && (
             <div className="flex flex-wrap gap-3 pt-2">{children}</div>
           )}

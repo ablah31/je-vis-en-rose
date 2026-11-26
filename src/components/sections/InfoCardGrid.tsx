@@ -82,26 +82,45 @@ export function InfoCardGrid({
           );
         }
 
-        const isExternal = /^https?:\/\//.test(item.linkUrl);
-        const linkClassName = "group block h-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring";
+        const isHttp = /^https?:\/\//.test(item.linkUrl);
+        const isDirectScheme = /^(mailto:|tel:)/i.test(item.linkUrl);
+        const linkClassName =
+          "group block h-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-ring";
         const linkedCard = (
           <Card className={`${cardClassName} group-hover:border-accent`}>
             <CardBody item={item} Icon={Icon} />
           </Card>
         );
 
-        return isExternal ? (
-          <a
-            key={key}
-            href={item.linkUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClassName}
-            aria-label={`${item.heading ?? "En savoir plus"} (nouvel onglet)`}
-          >
-            {linkedCard}
-          </a>
-        ) : (
+        if (isHttp) {
+          return (
+            <a
+              key={key}
+              href={item.linkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClassName}
+              aria-label={`${item.heading ?? "En savoir plus"} (nouvel onglet)`}
+            >
+              {linkedCard}
+            </a>
+          );
+        }
+
+        if (isDirectScheme) {
+          return (
+            <a
+              key={key}
+              href={item.linkUrl}
+              className={linkClassName}
+              aria-label={item.heading ?? "En savoir plus"}
+            >
+              {linkedCard}
+            </a>
+          );
+        }
+
+        return (
           <Link key={key} href={item.linkUrl} className={linkClassName}>
             {linkedCard}
           </Link>
